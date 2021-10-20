@@ -24,7 +24,7 @@ Maintenant, il faut définir une variable d'environement NODE_ENV_RENOV *(Je vou
 
 Cette variable est très importante car elle permet à l'API d'établir le lien avec la base de données.
 
-Maintenant, allez dans le dossier `src/`, et exécutez
+Verifiez que vous êtes bien à la racine du projet et exécutez:
 
 `sequelize-cli db:create`
 
