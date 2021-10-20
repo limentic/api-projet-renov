@@ -1,19 +1,16 @@
 'use strict'
 const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
-	class Users extends Model {
+	class Groups extends Model {
 		/* eslint-disable no-unused-vars */
 		static associate (models) {
 		}
 	}
-	Users.init({
-		first_name: DataTypes.STRING,
-		last_name: DataTypes.STRING,
-		email: DataTypes.STRING,
-		groupId: DataTypes.INTEGER
+	Groups.init({
+		label: DataTypes.STRING,
 	}, {
 		sequelize,
-		modelName: 'Users'
+		modelName: 'Groups'
 	})
-	return Users
+	return Groups
 }

@@ -11,7 +11,7 @@ module.exports = {
 			first_name: { type: Sequelize.STRING },
 			last_name: { type: Sequelize.STRING },
 			email: { type: Sequelize.STRING },
-			customerId: { type: Sequelize.INTEGER },
+			groupId: { type: Sequelize.INTEGER },
 			createdAt: { allowNull: false, type: Sequelize.DATE },
 			updatedAt: { allowNull: false, type: Sequelize.DATE }
 		})
