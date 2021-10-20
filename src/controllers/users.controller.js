@@ -11,7 +11,6 @@ module.exports = {
 				customerId: ctx.request.body.customerId,
 			})
 			ctx.response.status = 201
-			console.log('ggg')
 			ctx.body = `New user added with the name: ${ctx.request.body.first_name}`
 		} catch (err) {
 			ctx.throw(500, err)

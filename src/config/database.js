@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize')
+const vars = require('../../env.json')
 
+let config = ''
 /* 
 The object inside NODE_ENV_RENOV looks exactly like that:
 {
@@ -16,7 +18,12 @@ go look at the documentation over here:
 https://sequelize.org/master/manual/getting-started.html
 
 */
-const config = JSON.parse(process.env.NODE_ENV_RENOV)
+
+try {
+	config = JSON.parse(process.env.NODE_ENV_RENOV)
+} catch {
+	config = vars
+}
 
 module.exports = new Sequelize(
 	config.database,
